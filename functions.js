@@ -124,6 +124,7 @@ function validateInput()
 
     if (validator == true)
     {
+        window.location.href = window.location.href
         return true
     }
     return false
