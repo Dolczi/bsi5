@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            <form method="post" action="" class="grid-container" id="myForm" onsubmit="return validateInput()">
+            <form method="post" action="" class="grid-container" id="myForm" onsubmit="return validateInput(); this.action=window.location.href; return true">
                 <h1>Jakub Dolecki</h1>
                 <div>Płeć:</div>
                 <div class="genderform">
