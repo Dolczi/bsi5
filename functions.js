@@ -131,6 +131,8 @@ function validateInput()
         window.alert('KOD POCZTOWY: zawiera jedynie cyfry oddzielone myślnikiem w formacie 00-000')
         return false
     }
+    
+    return true
 }
 
 function clearBorders()
