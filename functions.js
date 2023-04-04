@@ -56,7 +56,7 @@ function validateInput()
 
     checkValue = document.getElementById("hnumber").value
     checkLocation = document.getElementById("hnumber")
-    regex = /^(?:[1-9]|[1-9]\d|[1-9]\d{2})(?:[a-zA-Z])?$/
+    regex = /^([1-9]|[1-9]\d|[1-9]\d{2})([a-zA-Z])?$/
     if (regex.test(checkValue)){
         checkLocation.style.border = "green solid 1px"
     }
