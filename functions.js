@@ -16,7 +16,7 @@ function validateInput()
 
     checkValue = document.getElementById("lname").value
     checkLocation = document.getElementById("lname")
-    regex = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-z]+(-[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)*$/
+    regex = /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(-[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+)*$/
     if (regex.test(checkValue)){
         checkLocation.style.border = "green solid 1px"
     }
@@ -64,7 +64,7 @@ function validateInput()
 
     checkValue = document.getElementById("fnumber").value
     checkLocation = document.getElementById("fnumber")
-    regex = /^([1-9]|[1-9]\d|[1-9]\d{2})$/
+    regex = /^(([1-9]|[1-9]\d|[1-9]\d{2}))?$/
     if (regex.test(checkValue)){
         checkLocation.style.border = "green solid 1px"
     }
