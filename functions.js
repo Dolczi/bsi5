@@ -12,7 +12,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('IMIĘ: zaczyna się wielką literą, zawiera jedynie litery')
-        return false
     }
 
     checkValue = document.getElementById("lname").value
@@ -25,7 +24,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('NAZWISKO: zaczyna się wielką literą, zawiera maksymalnie jeden myślnik w środku nazwy')
-        return false
     }
 
     checkValue = document.getElementById("street").value
@@ -38,7 +36,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('ULICA: zaczyna się od wielkiej litery lub cyfry (w przypadku nazwy pochodzącej od daty, może zawierać rok (w przypadku nazwy pochodzącej od wydarzenia historycznego)');
-        return false
     }
 
     checkValue = document.getElementById("city").value
@@ -51,7 +48,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('MIASTO: zaczyna się wielką literą, zawiera maksymalnie jeden myślnik w środku nazwy')
-        return false
     }
 
     checkValue = document.getElementById("hnumber").value
@@ -64,7 +60,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('NUMER DOMU: zawiera cyfry i maksymalnie jedną literę na końcu, nie zaczyna się cyfrą 0, maksymalna wartość 999')
-        return false
     }
 
     checkValue = document.getElementById("fnumber").value
@@ -77,7 +72,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('NUMER MIESZKANIA: zawiera jedynie cyfry, nie zaczyna się cyfrą 0, maksymalna wartość 999')
-        return false
     }
 
     checkValue = document.getElementById("pnumber").value
@@ -90,7 +84,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('NUMER TELEFONU: zawiera jedynie cyfry i myślniki w formacie 000-000-000')
-        return false
     }
 
     checkValue = new Date(document.getElementById("bday").value)
@@ -103,7 +96,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('DATA URODZENIA: nie może przekroczyć dzisiejszej daty')
-        return false
     }
 
     checkValue = document.getElementById("pesel").value
@@ -116,7 +108,6 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('PESEL: zawiera dokładnie 11 cyfr')
-        return false
     }
 
     checkValue = document.getElementById("pcode").value
@@ -129,12 +120,13 @@ function validateInput()
         checkLocation.style.border = "red solid 1px"
         validator = false
         window.alert('KOD POCZTOWY: zawiera jedynie cyfry oddzielone myślnikiem w formacie 00-000')
-        return false
     }
     
-     document.getElementById('myForm').setAttribute('novalidate', '')
-     document.getElementById('myForm').preventDefault()
-     document.clearBorders()
+     if (validator == true)
+     {
+         return true
+     }
+    return false
 }
 
 function clearBorders()
