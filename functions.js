@@ -132,7 +132,8 @@ function validateInput()
         return false
     }
     
-    return true
+    submitEvent.preventDefault()
+    document.clearBorders()
 }
 
 function clearBorders()
