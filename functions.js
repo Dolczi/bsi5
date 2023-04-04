@@ -132,8 +132,9 @@ function validateInput()
         return false
     }
     
-    window.alert('Dane poprawne!')
-    return true
+     document.getElementById('myForm').setAttribute('novalidate', '')
+     document.getElementById('myForm').preventDefault()
+     document.clearBorders()
 }
 
 function clearBorders()
