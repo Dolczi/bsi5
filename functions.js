@@ -132,8 +132,8 @@ function validateInput()
         return false
     }
     
-    submitEvent.preventDefault()
-    document.clearBorders()
+    window.alert('Dane poprawne!')
+    return true
 }
 
 function clearBorders()
