@@ -28,7 +28,7 @@ function validateInput()
 
     checkValue = document.getElementById("street").value
     checkLocation = document.getElementById("street")
-    regex = /^(\d+\s)?([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(\s|-)?)+(\s[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+\s\d{4}\sr\.)?$/
+    regex = /^(\d+\s)?([A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+(\s|-)?)+(\s[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+\s\d+(\sr\.)?)?$/
     if (regex.test(checkValue)){
         checkLocation.style.border = "green solid 1px"
     }
